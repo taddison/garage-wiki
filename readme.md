@@ -1,6 +1,6 @@
 # Garage Wiki
 
-What is this?  A bit of an experiment to start [working with the garage door up] (or [learning in public]).
+What is this?  A bit of an experiment to start [working with the garage door up] (or [learning in public]).  Might be stream-of-consciousness style notes, research for blog posts, or concepts that I'm learning.
 
 The wiki part?  That was the easiest way to ensure [gistpad] treats this page as a wiki 😄.
 
