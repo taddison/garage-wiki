@@ -1,2 +1,3 @@
 # Personal Blog
 
+tjaddison.com
