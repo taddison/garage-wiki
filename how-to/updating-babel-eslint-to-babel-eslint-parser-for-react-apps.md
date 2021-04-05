@@ -1,8 +1,6 @@
 # Updating `babel-eslint` to `@babel/eslint-parser` for React apps
 
-
-
-Short version:
+## Short version
 - Remove babel-eslint
 - Add @babel/eslint-parser @babel/core @babel/preset-react
 - Update parser (to `@babel/eslint-parser`)
@@ -14,7 +12,7 @@ babelOptions: {
 }
 ```
 
-Longer version:
+## Longer version
 
 **TODO**
 
