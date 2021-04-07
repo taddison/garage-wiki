@@ -8,7 +8,7 @@ warning babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This pack
 
 Upgrading is straightforward but the documentation isn't clear.  If you're not directly using babel (and instead are relying on something like create react app, nextjs, vitejs) the below instructions will get you back on the upgrade train and in about the same state that you started with.
 
-> If you are using babel directly then the below will probably work but I've not tested it - you can probably drop the `requireConfigFile: false` value.
+> If you are using babel directly then the below will probably work but I've not tested it - you can probably drop the `requireConfigFile: false` setting.
 
 ## Short version
 - Remove `babel-eslint`
