@@ -25,6 +25,8 @@ babelOptions: {
 ## Longer version
 
 **TODO**
+- for testing, installed at C:\temp\site-test -
+**TODO**
 
 As to why?  It's documented in the (now archived) babel-eslint repo (https://github.com/babel/babel-eslint):
 
