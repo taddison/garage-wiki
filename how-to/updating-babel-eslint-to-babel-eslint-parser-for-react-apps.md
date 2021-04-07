@@ -26,6 +26,19 @@ babelOptions: {
 
 ## Longer version
 
+First, update the parser by removing `babel-eslint` and installing `@babel/eslint-parser`:
+
+```shell
+yarn remove babel-eslint
+yarn add @babel/eslint-parser -D
+```
+
+And then update the parser (in the `.eslintrc.*` file):
+
+```javascript
+  parser: '@babel/eslint-parser',
+```
+
 **TODO**
 - for testing, installed at C:\temp\site-test -
 **TODO**
