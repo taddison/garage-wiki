@@ -6,8 +6,6 @@ As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-
 warning babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
 ```
 
-You're still fine to keep linting (it won't raise any errors), though at some point you (or some dependency) will want that upgrade.  I couldn't find any useful guides for this upgrade, so assuming you're using React and a fairly standard setup (I've tested with create-react-app, nextjs, and vitejs - though I imagine the steps are similar if not identical for other setups) then the below will get you pugrad
-
 Upgrading is straightforward but I couldn't find any clear guides - so if you want to avoid the trial and error you can follow the below steps (which I've tested on create-react-app, nextjs, and vitejs apps - which all use babel under the hood).
 
 As to *why* `babel-eslint` has been deprecated?  It's documented in the (now archived) [babel-eslint repo]:
