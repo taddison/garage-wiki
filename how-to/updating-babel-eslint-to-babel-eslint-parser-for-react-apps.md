@@ -68,8 +68,6 @@ If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4y
 
 So let's install the plugin:
 
-**NOT DONE FROM HERE IN TEST SITE**
-
 ```shell
 yarn add @babel/preset-react -D
 ```
@@ -85,9 +83,8 @@ parserOptions: {
 },
 ```
 
+And we'll finally be able to lint!
 
-**TODO**
-FINISH
-**TODO**
+> In some cases you may get an error requiring @babel/core - if this isn't a dependency installed by any other packages you have installed then you'll need to install it, as it's a required peer dependency for both `@babel/eslint-parser` and `@babel/preset-react`.
 
 [babel-eslint repo]: https://github.com/babel/babel-eslint
