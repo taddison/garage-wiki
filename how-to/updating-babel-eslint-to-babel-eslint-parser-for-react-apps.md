@@ -6,7 +6,7 @@ As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-
 warning babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
 ```
 
-Upgrading is straightforward but I couldn't find any clear guides - so if you want to avoid the trial and error you can follow the below steps (which I've tested on create-react-app, nextjs, and vitejs apps - which all use babel under the hood).
+Upgrading is straightforward but I couldn't find any clear guides - so if you want to avoid the trial and error you can follow the below steps (which I've tested on create-react-app, nextjs, and vitejs apps - which all use Babel under the hood).
 
 As to *why* `babel-eslint` has been deprecated?  It's documented in the (now archived) [babel-eslint repo]:
 
@@ -38,6 +38,51 @@ And then update the parser (in the `.eslintrc.*` file):
 ```javascript
   parser: '@babel/eslint-parser',
 ```
+
+If you lint you'll now probably get an error about config files:
+
+```
+ 0:0  error  Parsing error: No Babel config file detected for C:\temp\site-test\tailwind.config.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
+```
+
+To fix this we need to modify `parserOptions`:
+
+```javascript
+  parserOptions: {
+    requireConfigFile: false,
+  },
+```
+
+And now if we lint?  An error around React, which helpfully tells us how to fix the issue:
+
+```
+ 18:4  error  Parsing error: C:\temp\site-test\src\templates\blog-post.js: Support for the experimental syntax 'jsx' isn't currently enabled (18:5):
+  16 |
+  17 |   return (
+> 18 |     <Layout>
+     |     ^
+
+Add @babel/preset-react (https://git.io/JfeDR) to the 'presets' section of your Babel config to enable transformation.
+If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4yA) to the 'plugins' section to enable parsing
+```
+
+So let's install the plugin:
+
+```shell
+yarn add @babel/preset-react -D
+```
+
+And then update our parserOptions to pass this option through to Babel:
+
+```javascript
+parserOptions: {
+  requireConfigFile: false,
+  babelOptions: {
+    presets: ["@babel/preset-react"],
+  },
+},
+```
+
 
 **TODO**
 - for testing, installed at C:\temp\site-test -
