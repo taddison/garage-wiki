@@ -68,6 +68,8 @@ If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4y
 
 So let's install the plugin:
 
+**NOT DONE FROM HERE IN TEST SITE**
+
 ```shell
 yarn add @babel/preset-react -D
 ```
@@ -85,7 +87,7 @@ parserOptions: {
 
 
 **TODO**
-- for testing, installed at C:\temp\site-test -
+FINISH
 **TODO**
 
 [babel-eslint repo]: https://github.com/babel/babel-eslint
