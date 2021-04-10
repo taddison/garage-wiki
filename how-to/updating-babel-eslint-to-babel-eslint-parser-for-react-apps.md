@@ -1,6 +1,6 @@
 # Updating `babel-eslint` to `@babel/eslint-parser` for React apps
 
-As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-parser`.  That doesn't stop it (as of March 2020) being downloaded *6.5 million times per week*.  You wouldn't know this unless you attempted to add it as a new dependency, in which case `yarn` would tell you:
+As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-parser`.  That doesn't stop it (as of March 2021) being downloaded *6.5 million times per week*.  You wouldn't know this unless you attempted to add it as a new dependency, in which case `yarn` would tell you:
 
 ```
 warning babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
