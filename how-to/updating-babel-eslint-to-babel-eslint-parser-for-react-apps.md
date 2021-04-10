@@ -57,7 +57,7 @@ To fix this we need to modify `parserOptions`:
 +  },
 ```
 
-And now if we run eslint again?  An error around React, which helpfully tells us how to fix the issue:
+And now if we run eslint again?  An error parsing React code (specifically jsx), which helpfully tells us how to fix the issue:
 
 ```
  18:4  error  Parsing error: C:\temp\site-test\src\templates\blog-post.js: Support for the experimental syntax 'jsx' isn't currently enabled (18:5):
