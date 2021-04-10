@@ -27,19 +27,20 @@ babelOptions: {
 
 ## Longer version
 
-First, update the parser by removing `babel-eslint` and installing `@babel/eslint-parser`:
+First, switch out the Babel eslint plugin by removing `babel-eslint` and installing `@babel/eslint-parser`:
 
 ```shell
-npm remove babel-eslint
+npm uninstall babel-eslint
 npm install @babel/eslint-parser -D
 ```
 
 > If you're not running npm 7 (Node15) you will also need to add `@babel/core`, which is a [peer dependency] of `@babel/eslint-parser`.  From npm 7 peer dependencies are installed by default.  
 
-And then update the parser (in the `.eslintrc.*` file):
+And then update the parser (in your `.eslintrc.*` file):
 
-```javascript
-  parser: '@babel/eslint-parser',
+```diff
+- parser: 'babel-eslint',
++ parser: '@babel/eslint-parser',
 ```
 
 If you lint you'll now get an error about config files:
@@ -50,10 +51,10 @@ If you lint you'll now get an error about config files:
 
 To fix this we need to modify `parserOptions`:
 
-```javascript
-  parserOptions: {
-    requireConfigFile: false,
-  },
+```diff
++  parserOptions: {
++    requireConfigFile: false,
++  },
 ```
 
 And now if we lint?  An error around React, which helpfully tells us how to fix the issue:
@@ -77,12 +78,12 @@ npm install @babel/preset-react -D
 
 And then update our parserOptions to pass this option through to Babel:
 
-```javascript
+```diff
 parserOptions: {
   requireConfigFile: false,
-  babelOptions: {
-    presets: ["@babel/preset-react"],
-  },
++  babelOptions: {
++    presets: ["@babel/preset-react"],
++  },
 },
 ```
 
