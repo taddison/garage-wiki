@@ -1,9 +1,9 @@
 # Updating `babel-eslint` to `@babel/eslint-parser` for React apps
 
-As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-parser`.  That doesn't stop it (as of March 2021) being downloaded *6.5 million times per week*.  You wouldn't know this unless you attempted to add it as a new dependency, in which case `yarn` would tell you:
+As of March 2020, `babel-eslint` has been deprecated, and is now `@babel/eslint-parser`.  That doesn't stop it (as of March 2021) being downloaded *6.5 million times per week*.  You wouldn't know this unless you attempted to add it as a new dependency, in which case `npm` would tell you:
 
 ```
-warning babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+npm WARN deprecated babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
 ```
 
 Upgrading is straightforward but I couldn't find any clear guides - so if you want to avoid the trial and error you can follow the below steps (which I've tested on create-react-app, nextjs, and vitejs apps - which all use Babel under the hood).
@@ -14,7 +14,8 @@ As to *why* `babel-eslint` has been deprecated?  It's documented in the (now arc
 
 ## Short version
 - Remove `babel-eslint`
-- Add `@babel/eslint-parser` `@babel/core` `@babel/preset-react`
+- Add `@babel/eslint-parser` `@babel/preset-react`
+  - You may also need the peer dependency `@babel/core` (npm7 installs peer dependencies by default)
 - Update parser (to `@babel/eslint-parser`)
 - Add the following to the `parserOptions` configuration in the `eslintrc.js` file
 ```js
@@ -29,9 +30,11 @@ babelOptions: {
 First, update the parser by removing `babel-eslint` and installing `@babel/eslint-parser`:
 
 ```shell
-yarn remove babel-eslint
-yarn add @babel/eslint-parser -D
+npm remove babel-eslint
+npm install @babel/eslint-parser -D
 ```
+
+> If you're not running npm 7 (Node15) you will also need to add `@babel/core`, which is a [peer dependency] of `@babel/eslint-parser`.  From npm 7 peer dependencies are installed by default.  
 
 And then update the parser (in the `.eslintrc.*` file):
 
@@ -39,7 +42,7 @@ And then update the parser (in the `.eslintrc.*` file):
   parser: '@babel/eslint-parser',
 ```
 
-If you lint you'll now probably get an error about config files:
+If you lint you'll now get an error about config files:
 
 ```
  0:0  error  Parsing error: No Babel config file detected for C:\temp\site-test\tailwind.config.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
@@ -69,7 +72,7 @@ If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://git.io/vb4y
 So let's install the plugin:
 
 ```shell
-yarn add @babel/preset-react -D
+npm install @babel/preset-react -D
 ```
 
 And then update our parserOptions to pass this option through to Babel:
@@ -85,6 +88,5 @@ parserOptions: {
 
 And we'll finally be able to lint!
 
-> In some cases you may get an error requiring @babel/core - if this isn't a dependency installed by any other packages you have installed then you'll need to install it, as it's a required peer dependency for both `@babel/eslint-parser` and `@babel/preset-react`.
-
 [babel-eslint repo]: https://github.com/babel/babel-eslint
+[peer dependency]: https://nodejs.org/en/blog/npm/peer-dependencies/
