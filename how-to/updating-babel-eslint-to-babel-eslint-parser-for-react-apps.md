@@ -16,8 +16,8 @@ As to *why* `babel-eslint` has been deprecated?  It's documented in the (now arc
 - Remove `babel-eslint`
 - Add `@babel/eslint-parser` `@babel/preset-react`
   - You may also need the peer dependency `@babel/core` (npm7 installs peer dependencies by default)
-- Update parser (to `@babel/eslint-parser`)
-- Add the following to the `parserOptions` configuration in the `eslintrc.js` file
+- Update the parser in your `.eslintrc.*` file (from `babel-eslint` to `@babel/eslint-parser`)
+- Add the following to the `parserOptions` configuration in your `.eslintrc.*` file
 ```js
 requireConfigFile: false,
 babelOptions: {
