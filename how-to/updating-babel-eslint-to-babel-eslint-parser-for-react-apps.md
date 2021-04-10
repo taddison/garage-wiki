@@ -87,7 +87,7 @@ parserOptions: {
 },
 ```
 
-And we'll finally be able to lint!
+And we'll finally be able to run eslint!
 
 [babel-eslint repo]: https://github.com/babel/babel-eslint
 [peer dependency]: https://nodejs.org/en/blog/npm/peer-dependencies/
