@@ -43,7 +43,7 @@ And then update the parser (in your `.eslintrc.*` file):
 + parser: '@babel/eslint-parser',
 ```
 
-If you lint you'll now get an error about config files:
+If you run eslint now you'll now get an error about config files:
 
 ```
  0:0  error  Parsing error: No Babel config file detected for C:\temp\site-test\tailwind.config.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
@@ -57,7 +57,7 @@ To fix this we need to modify `parserOptions`:
 +  },
 ```
 
-And now if we lint?  An error around React, which helpfully tells us how to fix the issue:
+And now if we run eslint again?  An error around React, which helpfully tells us how to fix the issue:
 
 ```
  18:4  error  Parsing error: C:\temp\site-test\src\templates\blog-post.js: Support for the experimental syntax 'jsx' isn't currently enabled (18:5):
