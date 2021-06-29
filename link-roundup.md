@@ -1,3 +1,3 @@
 # Link-Roundup
 
-See [[Link]]
+See [[LinkRoundup]]
