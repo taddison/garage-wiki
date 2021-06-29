@@ -1,3 +1,3 @@
 # To-Blog
 
-If it's here, it 
+If it's backlinked here, maybe it should get blogged about?
