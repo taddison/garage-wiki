@@ -15,3 +15,4 @@ Currently working on cleaning it up and getting it into a state that could be us
 ## Post Ideas
 
 - Create Azure AD secured web app with Pulumi (see https://github.com/taddison/pulumi-csharp-azure-examples/tree/main/easyauth-webapp)
+- Import a repo from GitHub in Azure Pipelines
