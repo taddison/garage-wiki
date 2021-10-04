@@ -14,4 +14,4 @@ Currently working on cleaning it up and getting it into a state that could be us
 
 ## Post Ideas
 
-- Pester v5 test in azure devops (see [[April 13, 2021]])
+- Create Azure AD secured web app with Pulumi (see https://github.com/taddison/pulumi-csharp-azure-examples/tree/main/easyauth-webapp)
