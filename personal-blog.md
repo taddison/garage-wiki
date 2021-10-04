@@ -1,8 +1,3 @@
----
-# This is a comment
-header: true
----
-
 # Personal Blog
 
 tjaddison.com
