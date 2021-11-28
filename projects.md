@@ -10,7 +10,6 @@ Both in the sense of 'currently working on/would like to work on' and 'anti-proj
 
 ## Everything else (including 'snacks')
 
-- Write an exporter for pocket budget to go from firebase to json
-  - Data
-  - Metadata (accounts, etc.)
-- Write the importer to round-trip the data
+### Pocket-Budget
+  - Document the backup process and schedule it on some frequency
+  - Write the importer to round-trip the data (maybe hold off until migration)
