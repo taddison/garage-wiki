@@ -6,7 +6,6 @@ Both in the sense of 'currently working on/would like to work on' and 'anti-proj
 
 - [[Personal Blog]]
 - [[Typing]]
-- [[Windows to MacOS]]
 
 ## Everything else (including 'snacks')
 
