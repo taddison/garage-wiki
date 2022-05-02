@@ -19,8 +19,9 @@ Both in the sense of 'currently working on/would like to work on' and 'anti-proj
 - Audit feedly (dump feeds - one off/recurring)
   - Store somewhere
 - Review pocket reads
-- Script to dump pocket reads
+- Script to dump pocket reads (see https://github.com/taddison/PocketDumper)
 - Research systems for understanding/rating reading
+- Dump swarm checkins
 
 ### Pocket-Budget
   - Document the backup process and schedule it on some frequency
