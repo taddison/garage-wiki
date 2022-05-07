@@ -26,7 +26,3 @@ Both in the sense of 'currently working on/would like to work on' and 'anti-proj
 ### Pocket-Budget
   - Document the backup process and schedule it on some frequency
   - Write the importer to round-trip the data (maybe hold off until migration)
-
-### Next Starters
-- Update to Tailwind3 (jit by default, no purgecss)
-- Change js version to be instructions to remove ts
